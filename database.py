@@ -6,7 +6,7 @@ def connection():
         host="mysql-f3a7761-jevinsachaniya.e.aivencloud.com",
         port=17622, # Port add karna mat bhooliyega
         user="avnadmin",
-        password=os.environ.get("AVNS_n8ebEgH6HmJqqAWQqgP"), # Seedha password yahan likhein
+        password="AVNS_n8ebEgH6HmJqqAWQqgP", # Seedha password yahan likhein
         database="defaultdb",
         ssl_ca=None
     )
