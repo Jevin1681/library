@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}<title>Return Book</title>{% endblock %}
+{% block content %}
+
+<div class="see-container">
+    <h1>Return Book</h1>
+    <div class="buy-form">
+        <form action="{{ url_for("returnBook") }}" method="POST">
+            <input type="text" name="return-book" placeholder="Enter Book Name" required>
+            <button class="buy-btn" type="submit">Return Now</button>
+        </form>
+    </div>
+    <div class="all-books-div">
+        {% if my_books %}
+            <ul>
+                {% for book in my_books %}
+                    <li>{{ book[0] }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No Books Found...!</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
