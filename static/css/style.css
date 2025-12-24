@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    max-width: 100%;
 }
 
 body{
@@ -21,6 +22,7 @@ body{
     box-shadow: 0 7px 15px #2c3e50;
     padding: 0px 30px;
     border-bottom: 3px solid rgb(5, 11, 42);
+    max-width: 100%;
 }
 
 .header-main h2{
@@ -322,14 +324,14 @@ form div label{
 
 
 
-@media screen and (max-width: 445px){
+@media (max-width: 500px){
     
     .logo svg{
-        height: 49px; 
+        height: 30px; 
     }
 
     .header-main h2{
-        font-size: 20px;
+        font-size: 13px;
     }
 
     .middle-phase{
@@ -337,12 +339,13 @@ form div label{
     }
 
     .button{
-        height: 250px;
-        width: 250px;
+        height: 150px;
+        width: 230px;
     }
 
     .home-container{
         width: 550px;
+        margin: 35px auto;
     }
 
     .welcome-msg{
@@ -351,12 +354,30 @@ form div label{
 
     .home-container h1{
         font-size: 33px;
+        text-align: center;
     }
 
+    .see-container h1{
+        font-size: 15px;
+    }
+
+    .all-books-div li{
+        font-size: 10px;
+        padding: 12px;
+    }
     .header-main{
-        width: 560px;
+        max-width: 100%;
         border: 1px solid grey;
         box-shadow: none;
+        padding: 10px;
+    }
+
+    .right-phase li svg{
+        height: 15px;
+    }
+
+    .header-main a{
+        font-size: 13px;
     }
 
     .form-box{
@@ -367,14 +388,14 @@ form div label{
     .middle-phase-below{
         display: flex;
         padding: 15px;
-        width: 560px;
+        width: 100%;
         gap: 20px;
         font-weight: bold;
         justify-content: center;
         align-items: center;
         border-bottom: 3px solid black;
         background-color: white;
-        font-size: 20px;
+        font-size: 14px;
         box-shadow: 0 10px 20px rgba(0,0,0,0.3)
     }
     
@@ -384,28 +405,37 @@ form div label{
     }
 
     .login-box{
-        width: 250px;
+        width: 80%;
     }
 
     form div label{
-        font-size: 10px;
+        font-size: 14px;
     }
 
     form div input{
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .login-btn{
-        font-size: 10px;
+        font-size: 17px;
     }
 
     .login-box h1{
         padding: 0px;
     }
 
+    .all-books-div{
+        padding: 12px 0px;
+    }
+
+    .all-books-div ul{
+        gap: 10px;
+    }
+
     .see-container{
-        width: 470px;
-        margin: 100px 50px;
+        width: 85%;
+        text-align: center;
+        margin: 50px auto;
     }
 
     .buy-form form input{
@@ -417,7 +447,7 @@ form div label{
     }
 }
 
-@media (min-width: 445px) and (max-width: 800px){
+@media (min-width: 481px) and (max-width: 800px){
 
     .logo svg{
         height: 52px;   
@@ -437,7 +467,7 @@ form div label{
     }
 
     .home-container{
-        width: 750px;
+        width: auto;
     }
 
     .welcome-msg{
@@ -449,7 +479,7 @@ form div label{
     }
 
     .header-main{
-        width: 800px;
+        max-width: 100%;
         border: 1px solid grey;
         box-shadow: none;
     }
@@ -462,7 +492,7 @@ form div label{
     .middle-phase-below{
         display: flex;
         padding: 15px;
-        width: 800px;
+        width: 100%;
         gap: 20px;
         font-weight: bold;
         justify-content: center;
@@ -499,8 +529,8 @@ form div label{
     }
 
     .see-container{
-        width: 665px;
-        margin: 100px 50px;
+        width: 85%;
+        margin: 50px auto;
     }
 
     .buy-form form input{
