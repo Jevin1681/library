@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}<title>Donate Book</title>{% endblock %}
+{% block content %}
+
+<div class="see-container">
+        <h1>Donate Book</h1>
+        <div class="buy-form">
+            <form action="{{ url_for("donatebook")}}" method="POST">
+                <input type="text" name="donate-book" placeholder="Enter Book Name" required>
+                <button class="buy-btn" type="submit">Donate</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

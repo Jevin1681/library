@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}<title>Your Books</title>{% endblock %}
+
+{% block content %}
+
+<div class="see-container">
+    <h1>Your Books</h1>
+    <div class="all-books-div">
+        {% if my_books %}
+            <ul>
+                {% for book in my_books %}
+                    <li>{{ book[0] }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No Books Found!</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
