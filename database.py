@@ -1,35 +1,23 @@
 import mysql.connector
 import os
 from dotenv import load_dotenv
-load_dotenv()
-
 import mysql.connector
 
-def connection():
-    try:
-        db_connection = mysql.connector.connect(
-            host="mysql-2eeeacd2-jevinsachaniya.l.aivencloud.com",
-            user="avnadmin",
-            password=os.getenv("AVNS_1tXQe6H9iDMGyAFAf7U"),
-            database="defaultdb",
-            port=17622,  # Yahan quotes hata diye hain
-            use_unicode=True,
-            ssl_ca="ca.pem"  # Ensure karein ye file aapke folder mein hai
-        )
-        return db_connection
-    except mysql.connector.Error as err:
-        print(f"Connection Error: {err}")
-        
+# Ye line sabse upar honi chahiye
+load_dotenv() 
 
-# Use kaise karein:
-    db = connection()
-    if db:
-        cursor = db.cursor()
-        # Woh Primary Key wala error handle karne ke liye ye line zaroor jodein:
-        cursor.execute("SET SESSION sql_require_primary_key = 0;")
-        print("Connected successfully!")
-        
-    return db_connection
+def connection():
+    pwd = os.getenv("DB_PASSWORD")
+    print(f"DEBUG: Password found: {'Yes' if pwd else 'No'}") # Isse check hoga pass mil raha hai ya nahi
+    
+    return mysql.connector.connect(
+        host="mysql-2eeeacd2-jevinsachaniya.l.aivencloud.com",
+        user="avnadmin",
+        password=pwd,
+        database="defaultdb",
+        port=17622,
+        ssl_ca="ca.pem"
+    )
 
 db_connection = connection()
 db = db_connection.cursor()
